@@ -5,12 +5,15 @@ def readfile():
     input_file = input("Enter the name of the input file: ")
     with open(input_file, "r") as file:
         current_line = file.readline()
-        current_integer = current_line.split(" ")
+        print(current_line)
+        current_integer = current_line.strip().split()
+        print(current_integer)
         integer_list = []
         for current_line in file:
-            for current_integer in current_line:
+            for current_integer in current_integer:
                 integer_list.append(current_integer)
-        print(integer_list)
+    print(integer_list)
+        
 
 
 def main():

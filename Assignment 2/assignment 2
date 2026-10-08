@@ -1,8 +1,16 @@
 import math
 import time
 
+def readfile():
+    input_file = input("Enter the name of the input file: ")
+    with open(input_file, "r") as file:
+        lines = file.readlines()
+        for line in lines:
+            print(line.strip())
+
 def main():
+    readfile()
     pass
 
-if __name__ == __main__:
+if __name__ == "__main__":
     main()

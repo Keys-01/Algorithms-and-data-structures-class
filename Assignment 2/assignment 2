@@ -4,9 +4,14 @@ import time
 def readfile():
     input_file = input("Enter the name of the input file: ")
     with open(input_file, "r") as file:
-        lines = file.readlines()
-        for line in lines:
-            print(line.strip())
+        current_line = file.readline()
+        current_integer = current_line.split(" ")
+        integer_list = []
+        for current_line in file:
+            for current_integer in current_line:
+                integer_list.append(current_integer)
+        print(integer_list)
+
 
 def main():
     readfile()

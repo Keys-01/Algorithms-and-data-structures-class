@@ -4,24 +4,20 @@ import time
 def readfile():
     input_file = "a2-sample.txt"  # input("Enter the name of the input file: ")
     with open(input_file, "r") as file:
-        current_line = file.readline()
-        print(current_line.strip().split())
-        current_integer_list = current_line.strip().split()
         integer_list = []
-        for i in range(int(len(current_integer_list))):
-            current_integer_list[i] = int(current_integer_list[i])
         for current_line in file:
             current_integer_list = current_line.strip().split()
-            for i in range(int(len(current_integer_list))):
+            for i in range(len(current_integer_list)):
                 current_integer_list[i] = int(current_integer_list[i])
             integer_list.append(current_integer_list)
         print(integer_list)
+    return integer_list
 
         
 
 
 def main():
-    readfile()
+    main_list = readfile()
     pass
 
 if __name__ == "__main__":
